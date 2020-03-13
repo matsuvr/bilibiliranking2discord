@@ -40,7 +40,7 @@ function postMessage() {
   var prop = PropertiesService.getScriptProperties().getProperties();
   
   
-  const URL = 'https://www.bilibili.com/ranking/all/0/0/3';//bilibiliのランキングページ　
+  const URL = 'https://www.bilibili.com/ranking/all/0/0/1';//bilibiliのランキングページ　
   var key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; //phantomJSのキーを入れる
   
   var payload = 

@@ -89,7 +89,7 @@ function postMessage() {
                             .to('</a>')
                             .iterate();
   
-  Logger.log('rankedtitle is ' + rankedtitle[0]);
+  // Logger.log('rankedtitle is ' + rankedtitle[0]);
   
   var howmanyplayed = Parser.data(doc)
                               .from('<i class="b-icon play"></i>')

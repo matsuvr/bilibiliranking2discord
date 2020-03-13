@@ -1,11 +1,11 @@
-//PhantomJSを使ってランキングページのHTMLを取得するので、PhantomJSのアカウントをとって44行目のキーに入れてください
+//PhantomJSを使ってランキングページのHTMLを取得するので、PhantomJSのアカウントをとって45行目のキーに入れてください
 //Parserというライブラリを予めGASに読み込んでおいてください。https://www.kutil.org/2016/01/easy-data-scrapping-with-google-apps.html 「GAS Parser」でググれば日本語の解説も見つかります
-
+//GASのTrigger機能つかって定期的に実行する想定です
 
 // Discordに送信する関数
 function discord(message) {
     const url        = 'https://discordapp.com/api/webhooks/xxxxxxxxxxxxxxxxxxxxxxxxxxx'; //Discordに投稿したいチャンネルのWebhookURLを入れる
-    const channel    = '#xxxxxxxxxxxxxxx'; //チャンネル名を入れる
+    const channel    = '#xxxxxxxxxxxxxxx'; //投稿するチャンネル名を入れる
     const text       = message;
     const username   = 'bot';
     const parse      = 'full';

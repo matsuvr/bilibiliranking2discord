@@ -74,7 +74,7 @@ function postMessage() {
                     .to('</li>')
                     .iterate();
   
-  Logger.log('rankeditem is ' + rankeditem[0]);
+  // Logger.log('rankeditem is ' + rankeditem[0]);
   
   
   var rankedurl = Parser.data(doc)
@@ -82,7 +82,7 @@ function postMessage() {
                     .to('" target="_blank" class="title">')
                     .iterate();
   
-  Logger.log('rankedurl is ' + rankedurl[0]);
+  // Logger.log('rankedurl is ' + rankedurl[0]);
   
   var rankedtitle = Parser.data(doc)
                             .from('target="_blank" class="title">')
@@ -97,9 +97,7 @@ function postMessage() {
                               .iterate();
 
   for(i=0;i<10;++i){
-    // slackApp.postMessage("チャンネルのID", "[" + (i+1) + "] http://stackshare.io" + as[i] + " : " + names[i] + " : " + descs[i].replace(/¥n/ig,""), {username : "stackshare.io"});
     var j = i+1;
-    var ranknumber = j.toString();
     message += j + "位：" + rankedtitle[i] + " \r" + rankedurl[i]  + "\r再生数" + howmanyplayed[i] + "　\r\r";
   }
   

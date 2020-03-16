@@ -52,7 +52,7 @@ function postMessage() {
  
   var url = 'https://phantomjscloud.com/api/browser/v2/'+ key +'/?request=' + payload; 
   
-  Logger.log(url);
+  // Logger.log(url);
   
   var response = UrlFetchApp.fetch(url);
  
@@ -69,11 +69,11 @@ function postMessage() {
 
 
   
-  var rankeditem = Parser.data(doc)
-                    .from('<li class="rank-item">')
-                    .to('</li>')
-                    .iterate();
-  
+  // var rankeditem = Parser.data(doc)
+  //                  .from('<li class="rank-item">')
+  //                  .to('</li>')
+  //                  .iterate();
+  //
   // Logger.log('rankeditem is ' + rankeditem[0]);
   
   
@@ -98,7 +98,8 @@ function postMessage() {
 
   for(i=0;i<10;++i){
     var j = i+1;
-    message += j + "位：" + rankedtitle[i] + " \r" + rankedurl[i]  + "\r再生数" + howmanyplayed[i] + "　\r\r";
+    translated[i] = LanguageApp.translate( rankedtitle[i] , 'zh' , 'ja');  
+    message += j + "位：" + rankedtitle[i] + " \r > 機械翻訳： " + translated[i] + " \r > " + rankedurl[i]  + "\r > 再生数 " + howmanyplayed[i] + "　\r\r";
   }
   
   discord(message);

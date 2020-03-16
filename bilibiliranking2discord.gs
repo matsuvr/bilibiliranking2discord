@@ -1,4 +1,4 @@
-//PhantomJS Cloudを使ってランキングページのHTMLを取得するので、PhantomJS Cloudのアカウントをとって45行目のキーに入れてください
+//PhantomJS Cloudを使ってランキングページのHTMLを取得するので、PhantomJS Cloudのアカウントをとって44行目のキーに入れてください
 //Parserというライブラリを予めGASに読み込んでおいてください。https://www.kutil.org/2016/01/easy-data-scrapping-with-google-apps.html 「GAS Parser」でググれば日本語の解説も見つかります
 //GASのTrigger機能つかって「postMessage」関数を定期的に実行する想定です
 
